@@ -1,0 +1,13 @@
+version: '2'
+services:
+  youtubeclone:
+    image: ambientum/node
+    container_name: youtube_clone
+    command: npm run dev
+    volumes:
+      - .:/var/www/app
+    working_dir: /var/www/app
+    ports:
+      - 5000:3000
+    environment:
+      HOST: 0.0.0.0

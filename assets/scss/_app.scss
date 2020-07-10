@@ -1,0 +1,106 @@
+//General
+#body-layout {
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+//Layout
+.ant-layout {
+  background-color: $neutral;
+}
+
+//Pages
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+//Menu SideBar
+.ant-layout-sider-light {
+  border-right: 1px solid darken($color: $neutral, $amount: 5%);
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border: none;
+}
+
+//Utilities
+.btn-primary-color {
+  background: $primary;
+  color: white;
+  border: 1px solid darken($color: $primary, $amount: 10%);
+  &:hover {
+    background: $secondary;
+    border-color: darken($color: $secondary, $amount: 10%);
+  }
+}
+
+.btn-secondary-color {
+  background: $secondary;
+  color: white;
+  border: 1px solid darken($color: $secondary, $amount: 10%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.card-style {
+  padding: 1rem;
+  border: 1px solid darken($color: $neutral, $amount: 10%);
+  border-radius: 4px;
+  background: white;
+}
+
+.avatar-border {
+  border: 2px solid $primary;
+  padding: 2px;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.text-light-style {
+  font-size: 0.62rem;
+  color: darken($color: $neutral, $amount: 20%);
+  line-height: 0.9rem;
+}
+
+.label-light {
+  background: lighten($color: #0065ff, $amount: 45%);
+  border-radius: 1rem;
+  padding: 0.2rem;
+  color: $neutral-black;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-bottom: 0.3rem;
+}

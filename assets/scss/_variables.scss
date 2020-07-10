@@ -1,0 +1,7 @@
+$primary: #e52d27;
+$secondary: lighten(
+  $color: $primary,
+  $amount: 10%
+);
+$neutral: #f3f4f6;
+$neutral-black: #282828;
