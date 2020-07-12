@@ -104,3 +104,18 @@
   font-size: 0.75rem;
   margin-bottom: 0.3rem;
 }
+
+.link {
+  color: $neutral-black;
+  &:hover {
+    color: $primary;
+    transition: color 0.2s linear;
+  }
+  &.invert {
+    color: $primary;
+    &:hover {
+      color: $neutral-black;
+      transition: color 0.2s linear;
+    }
+  }
+}

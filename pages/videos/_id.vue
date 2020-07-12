@@ -15,6 +15,7 @@
         </div>
       </a-col>
       <a-col :span="10">
+        <h2>{{ video.snippet.title }}</h2>
         <a-row :gutter="[16, 32]">
           <a-col :span="12">
             <a-statistic

@@ -13,10 +13,7 @@ export default {
   methods: {
     onSearch(value) {
       this.$router.push({
-        name: 'search',
-        params: {
-          query: value
-        }
+        path: '/search/' + value
       })
     }
   }

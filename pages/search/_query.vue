@@ -5,9 +5,6 @@
         <h1>Resultado da Pesquisa</h1>
       </a-col>
     </a-row>
-    <a-row>
-      <a-col> Pesquisa: {{ query }} </a-col>
-    </a-row>
     <div class="search-result card-style">
       <a-row type="flex" :gutter="[16, 32]">
         <a-col v-for="video in videos.items" :key="video.etag" :span="8">
@@ -19,9 +16,12 @@
             />
             <a-card-meta>
               <template slot="title">
-                <nuxt-link :to="`videos/${video.id.videoId}`">{{
-                  video.snippet.title
-                }}</nuxt-link>
+                <nuxt-link
+                  :to="`/videos/${video.id.videoId}`"
+                  class="link"
+                  no-prefetch
+                  >{{ video.snippet.title }}</nuxt-link
+                >
               </template>
               <template slot="description">
                 <div>
@@ -29,10 +29,11 @@
                     :href="
                       `https://www.youtube.com/channel/${video.snippet.channelId}`
                     "
+                    class="link invert"
                     >{{ video.snippet.channelTitle }}</a
                   >
                 </div>
-                <div>{{ video.snippet.publishTime }}</div>
+                <div>{{ formatDate(video.snippet.publishTime) }}</div>
               </template>
               <a-avatar
                 slot="avatar"
@@ -59,8 +60,8 @@ export default {
         key: apiKey,
         type: 'video',
         q: params.query,
-        maxResults: 10,
-        order: 'viewCount'
+        maxResults: 12,
+        order: 'date'
       }
     })
     return { videos: results, query: params.query }
@@ -69,6 +70,13 @@ export default {
     return {
       videos: [],
       query: ''
+    }
+  },
+  methods: {
+    formatDate(date) {
+      const m = this.$moment(date)
+      const diff = this.$moment().diff(m, 'seconds')
+      return `Publicado a ${this.$moment.duration(diff, 'seconds').humanize()}`
     }
   }
 }
