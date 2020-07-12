@@ -20,11 +20,7 @@
           <a-col :span="4">
             <ul class="actions text-right">
               <li>
-                <a-button
-                  type="primary"
-                  class="btn-primary-color"
-                  icon="upload"
-                  :size="size"
+                <a-button type="primary" class="btn-primary-color" icon="upload"
                   >Upload</a-button
                 >
               </li>

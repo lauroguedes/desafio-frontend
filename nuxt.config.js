@@ -42,6 +42,10 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  env: {
+    urlApi: 'https://www.googleapis.com/youtube/v3/',
+    apiKey: 'AIzaSyABpxN8trKH3EKEJT-iCxTK_ngZ1Ek5m-U'
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

@@ -1,7 +1,7 @@
 {
-  "name": "dryve-frontend-challenge",
+  "name": "desafio-frontend",
   "version": "1.0.0",
-  "description": "My challenge frontend project for Dryve Company",
+  "description": "My challenge frontend project for Bycoders_",
   "author": "lauroguedes",
   "private": true,
   "scripts": {

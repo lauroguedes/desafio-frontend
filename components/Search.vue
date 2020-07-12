@@ -2,8 +2,8 @@
   <div class="search-content">
     <a-input-search
       placeholder="Pesquisar..."
-      @search="onSearch"
       size="large"
+      @search="onSearch"
     />
   </div>
 </template>
@@ -12,7 +12,12 @@
 export default {
   methods: {
     onSearch(value) {
-      console.log(value)
+      this.$router.push({
+        name: 'search',
+        params: {
+          query: value
+        }
+      })
     }
   }
 }
