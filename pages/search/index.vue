@@ -19,11 +19,9 @@
             />
             <a-card-meta>
               <template slot="title">
-                <a
-                  :href="`https://www.youtube.com/watch?v=${video.id.videoId}`"
-                  target="_blank"
-                  >{{ video.snippet.title }}</a
-                >
+                <nuxt-link :to="`videos/${video.id.videoId}`">{{
+                  video.snippet.title
+                }}</nuxt-link>
               </template>
               <template slot="description">
                 <div>
