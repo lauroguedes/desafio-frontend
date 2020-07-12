@@ -106,15 +106,15 @@
 }
 
 .link {
-  color: $neutral-black;
+  color: $neutral-black !important;
   &:hover {
-    color: $primary;
+    color: $primary !important;
     transition: color 0.2s linear;
   }
   &.invert {
-    color: $primary;
+    color: $primary !important;
     &:hover {
-      color: $neutral-black;
+      color: $neutral-black !important;
       transition: color 0.2s linear;
     }
   }

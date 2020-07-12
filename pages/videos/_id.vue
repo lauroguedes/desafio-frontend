@@ -90,6 +90,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 const url = process.env.urlApi + 'videos'
 const apiKey = process.env.apiKey
 
@@ -110,6 +112,20 @@ export default {
       video: {},
       id: ''
     }
+  },
+  mounted() {
+    const historyItem = {
+      id: this.$route.params.id,
+      title: this.video.snippet.title,
+      cover: this.video.snippet.thumbnails.default.url,
+      views: this.video.statistics.viewCount,
+      channelTitle: this.video.snippet.channelTitle,
+      publishedAt: this.video.snippet.publishedAt
+    }
+    this.addHistory(historyItem)
+  },
+  methods: {
+    ...mapActions('history', ['addHistory'])
   }
 }
 </script>
