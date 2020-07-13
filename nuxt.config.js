@@ -45,7 +45,7 @@ export default {
   ],
   env: {
     urlApi: 'https://www.googleapis.com/youtube/v3/',
-    apiKey: 'AIzaSyABpxN8trKH3EKEJT-iCxTK_ngZ1Ek5m-U'
+    apiKey: 'AIzaSyAInA3RIyVmqoN65MtgpWaIhc-ScxUKWi4'
   },
   /*
    ** Axios module configuration

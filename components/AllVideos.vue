@@ -1,13 +1,17 @@
 <template>
-  <div class="more-videos card-style">
+  <div class="all-videos card-style">
     <a-row>
       <a-col>
-        <h2>6 Vídeos mais Populares</h2>
+        <h2>Vídeos</h2>
       </a-col>
     </a-row>
     <a-row type="flex" :gutter="[16, 32]">
       <a-col :span="24">
-        <a-list :grid="{ gutter: 16, md: 3 }" :data-source="videos">
+        <a-list
+          :grid="{ gutter: 16, md: 3 }"
+          :pagination="pagination"
+          :data-source="videos"
+        >
           <a-list-item slot="renderItem" slot-scope="item, index">
             <a-card :key="index" style="max-width: 100%">
               <img
@@ -17,7 +21,7 @@
               />
               <a-card-meta>
                 <template slot="title">
-                  <nuxt-link :to="`/videos/${item.id}`" class="link">{{
+                  <nuxt-link :to="`/videos/${item.id.videoId}`" class="link">{{
                     item.snippet.title
                   }}</nuxt-link>
                 </template>
@@ -33,7 +37,12 @@
                     >
                   </div>
                   <div>
-                    <a-icon type="eye" /> {{ item.statistics.viewCount }}
+                    <a-icon type="calendar" />
+                    {{
+                      $moment(item.snippet.publishTime).format(
+                        'DD/MM/YYYY H:mm:ss'
+                      )
+                    }}
                   </div>
                 </template>
               </a-card-meta>
@@ -46,13 +55,16 @@
 </template>
 
 <script>
-const url = process.env.urlApi + 'videos'
+const url = process.env.urlApi + 'search'
 const apiKey = process.env.apiKey
 
 export default {
   data() {
     return {
-      videos: []
+      videos: [],
+      pagination: {
+        pageSize: 3
+      }
     }
   },
   mounted() {
@@ -63,9 +75,9 @@ export default {
       try {
         const videos = await this.$axios.$get(url, {
           params: {
-            part: 'statistics,snippet',
-            chart: 'mostPopular',
-            maxResults: 6,
+            part: 'snippet',
+            maxResults: 50,
+            order: 'rating',
             key: apiKey
           }
         })

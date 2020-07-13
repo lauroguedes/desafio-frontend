@@ -2,7 +2,7 @@
   <div class="index-content">
     <a-row :gutter="[0, 32]">
       <a-col :span="24">
-        <recommended-videos />
+        <all-videos />
       </a-col>
     </a-row>
     <a-row :gutter="16">
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import RecommendedVideos from '../components/RecommendedVideos'
+import AllVideos from '../components/AllVideos'
 import MoreVideos from '../components/MoreVideos'
 import SearchHistory from '../components/SearchHistory'
 export default {
   components: {
-    'recommended-videos': RecommendedVideos,
+    'all-videos': AllVideos,
     'more-videos': MoreVideos,
     'search-history': SearchHistory
   }

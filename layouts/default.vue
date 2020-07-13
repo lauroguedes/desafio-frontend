@@ -14,10 +14,10 @@
           <a-col :span="4">
             <logo />
           </a-col>
-          <a-col :span="15">
+          <a-col :span="19" style="padding-right: 1rem">
             <search />
           </a-col>
-          <a-col :span="4">
+          <!--           <a-col :span="4">
             <ul class="actions text-right">
               <li>
                 <a-button type="primary" class="btn-primary-color" icon="upload"
@@ -25,7 +25,7 @@
                 >
               </li>
             </ul>
-          </a-col>
+          </a-col> -->
         </a-row>
       </a-layout-header>
       <a-layout-content
@@ -40,10 +40,10 @@
       <a-layout-footer style="textAlign: right">
         <a-row>
           <a-col :span="12">
-            <p class="text-left">2020 @ Dryve Tecnologia Ltda</p>
+            <p class="text-left">2020 @ Youtube Clone</p>
           </a-col>
           <a-col :span="12">
-            <p>Versão 1.0.1</p>
+            <p>Versão 1.0.0</p>
           </a-col>
         </a-row>
       </a-layout-footer>
@@ -63,7 +63,7 @@ export default {
   },
   data() {
     return {
-      collapsed: false
+      collapsed: true
     }
   }
 }
