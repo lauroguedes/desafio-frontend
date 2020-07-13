@@ -62,13 +62,11 @@ O layout da **home** não precisa ser exatamente como o do wireframe. Você pode
 
 ---
 
-===
-
 ## Youtube Clone - Desafio FrontEnd
 
 Nessa aplicaçao foi desenvolido uma integraçao simples com a API do Youtube, permitindo realizar buscas de todos os videos, videos mais populares e pesquisas especificas. Além de ter uma lista de hisórico de buscas persistindo em localStorage e gerenciada pelo Vuex.
 
-![Tela Youtube Clone](desafio-front-tela.gif)
+![Tela Youtube Clone](/desafio-front-tela.gif)
 
 Acesse a [Demo](https://desafio-youtubeclone.netlify.app)
 
