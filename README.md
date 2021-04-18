@@ -4,8 +4,6 @@ Nessa aplicaçao foi desenvolido uma integraçao simples com a API do Youtube, p
 
 ![Tela Youtube Clone](/desafio-frontend-tela.gif)
 
-Acesse a [Demo](https://desafio-youtubeclone.netlify.app)
-
 ### Tecnologias Utilizadas
 
 - [VueJs](https://vuejs.org)
